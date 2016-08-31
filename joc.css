@@ -130,3 +130,113 @@ ins,
 a {
   text-decoration: none;
 }
+
+/*html5 新标签 解决ie9以下浏览器与标准浏览器统一问题*/
+article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section,address{display:block}
+mark{background:#FF0;color:#000}
+template{display:none}
+
+/*布局  grid***********************************************************/
+/**
+ * 将页面分割为几个大块，通常有头部、主体、主栏、侧栏、尾部等！
+ * min-width 等于可视区宽度，可以解决ie6以上浏览器小于页面宽度或者浏览器缩小，拉动滚动出现白边问题
+ */
+.g-wp{width:1200px;min-width: 1200px;margin-left:auto;margin-right:auto}
+.g-wa{width:100%;min-width: 1200px;}
+.g-hd{}
+.g-mn{}
+.g-bd{}
+.g-ft{}
+.g-sd{}
+
+/*盒子模型 Box Model***********************************************************/
+/**
+ * 将盒子模型宽度，高度，边框，外边距，内填充统一声明，按需使用，通常被重复用。
+ *
+ */
+.b-w10{width:10px;}
+.b-h100{height: 100px;}
+.b-b1{border: 1px solid #000;}
+.b-ml10{margin-left: 10px;}
+.b-pr10{padding-right: 10px;}
+.b-w0{width: 0 !important;}
+.b-wa{width: auto !important;}
+.b-h0{height: 0 !important;}
+.b-ha{height: auto !important;}
+.b-b0{border: 0 !important;}
+.b-m0{margin: 0 !important;}
+.b-p0{padding: 0 !important;}
+
+/*功能  function*******************************************************/
+/**
+ * 为方便一些常用样式的使用，我们将这些使用率较高的样式剥离出来，按需使用，
+ * 通常这些选择器具有固定样式表现，比如清除浮动等！不可滥用！
+ */
+.f-fl{float:left;}
+.f-fr{float:right;}
+/** 解决ie6双边距问题 */
+.f-fl,.f-fr{_display:inline;}
+.f-cb:after,.f-cb:before{content: "";display:table;clear:both;}
+.f-cb{*zoom:1}
+.f-tal{text-align: left;}
+.f-tac{text-align: center;}
+.f-tar{text-align: right;}
+.f-st{font-family:\5b8b\4f53,"SimSun", "宋体";}
+.f-fz16{font-size: 16px;}
+.f-fz18{font-size: 18px;}
+.f-fz20{font-size: 20px;}
+.f-fz24{font-size: 24px;}
+.f-fz30{font-size: 30px;}
+.f-show{display: block !important;}
+.f-hide{display: none !important;}
+
+/* 皮肤 skin********************************************************/
+/**
+ * 如果你需要把皮肤型的样式抽离出来，通常为文字色、背景色（图）、边框色等，
+ * 非换肤型网站通常只提取文字色！非换肤型网站不可滥用此类！
+ */
+.s-title{}
+
+/*图标 iconfont*******************************************************/
+/**
+ * 图标分为图标字体和图片图标，这些图标网站整体统一可以共用，图片可以同雪碧图。
+ */
+.i-iconfont{}
+
+/*模块  module********************************************************/
+/**
+ * 通常是一个语义化的可以重复使用的较大的整体！比如导航、登录、注册、各种列表、评论、搜索等！
+ */
+.m-logo{}
+.m-list{}
+
+/*组件  widget********************************************************/
+/**
+ * 通常是一个语义化的可以重复使用的独立的较大的整体！比如模态，灯箱，轮播图，选项卡，提示等！
+ */
+.k-motai{}
+.k-lightbox{}
+.k-slide{}
+.k-tab{}
+
+/*元件  unit********************************************************/
+/**
+ * 通常是一个不可再分的较为小巧的个体，通常被重复用于各种模块和组件中！比如按钮、输入框、loading等！
+ */
+.u-btn{}
+.u-inp{}
+
+/*状态  condition********************************************************/
+/**
+ * 为状态类样式加入前缀，统一标识，方便识别
+ */
+.c-sel{}  /* (selected)    选中 */
+.c-cur{}  /* (current)    当前 */
+.c-show{}  /* (show)    显示 */
+.c-hide{}  /* (hide)    隐藏 */
+.c-open{}  /* (open)    打开 */
+.c-close{}  /* (close)    关闭 */
+.c-err{}  /* (error)    出错 */
+.c-dis{}  /* (disabled)    不可用 */
+.c-sel{}  /* (selected)    选中 */
+
